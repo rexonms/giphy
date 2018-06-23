@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getGifs() should match snapshot 1`] = `[Function]`;
+
+exports[`setInitialArguments() should match snapshot 1`] = `
+Object {
+  "payload": undefined,
+  "type": "app/MainContainer/SET_INIT_ARGUMENTS",
+}
+`;

@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+  min-width: 70vw;
+  input {
+    flex: 3;
+    font-size: $fontSizeSmall;
+    outline: 0;
+    transition: background-color 200ms linear;
+    padding: 18px;
+    margin: 0;
+    background-color: $greyE;
+  }
+  button {
+    flex: 1;
+    outline: 0;
+    margin: auto;
+    padding:$defaultPadding;
+    background: $grey2;
+    border: none;
+    font-size: $fontSizeDefault;
+    transition: background-color .2s linear;
+    color: $white;
+  }
+  button:hover {
+    background: $grey3;
+    transition: background-color .2s linear;
+  }
+}
+

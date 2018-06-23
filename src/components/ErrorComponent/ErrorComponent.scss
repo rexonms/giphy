@@ -1,0 +1,10 @@
+.container {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 100vh;
+  p {
+    color: red;
+  }
+}

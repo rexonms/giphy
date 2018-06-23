@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBox should match previous snapshot 1`] = `
+<form
+  className="container"
+  onSubmit={[Function]}
+>
+  <input
+    name="value"
+    onChange={[Function]}
+    placeholder="placeholder"
+    value="value"
+  />
+  <button
+    onClick={[Function]}
+  >
+    Button Text
+  </button>
+</form>
+`;

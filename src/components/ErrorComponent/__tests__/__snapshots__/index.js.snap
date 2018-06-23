@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error Component should render previous snapshot 1`] = `
+<div
+  className="container"
+>
+  <p>
+    OMG what happen!
+  </p>
+</div>
+`;
