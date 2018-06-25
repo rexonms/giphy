@@ -19,6 +19,7 @@ const globalVariable = {
   blue: '#0070ff',
   white: '#fff',
   black: '#000',
+  grey1: '#111',
   grey2: '#222',
   grey3: '#333',
   grey6: '#666',

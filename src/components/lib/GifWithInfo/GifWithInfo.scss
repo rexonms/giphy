@@ -6,9 +6,9 @@
   animation-iteration-count: infinite;
   animation-name: placeHolderShimmer;
   animation-timing-function: linear;
-  background: $greyE;
-  background: linear-gradient(to right, $greyD 8%, $greyC 18%, $greyD 33%);
-  background-size: 800px 104px;
+  background: $grey3;
+  background: linear-gradient(to right, $grey1 8%, $grey2 18%, $grey1 33%);
+  background-size: 800px 800px;
   line-height: 0;
 }
 @keyframes placeHolderShimmer{
