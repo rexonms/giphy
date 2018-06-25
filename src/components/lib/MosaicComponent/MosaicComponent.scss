@@ -1,13 +1,14 @@
 .container {
   .gifs {
+    @media (min-width:320px)  { column-count: 1; /* smartphones, iPhone, portrait 480x320 phones */ }
+    @media (min-width:481px)  { column-count: 2;/* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+    @media (min-width:641px)  { column-count: 3;/* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+    @media (min-width:961px)  { column-count: 4;/* tablet, landscape iPad, lo-res laptops ands desktops */ }
     column-count: 5;
     column-gap: 1px;
     div{
       width:  100%;
       display: inline-block;
-      //margin:  5px;
-      //padding:  10px;
-      //background:  #efefef;
       img {
         width: 100%;
       }

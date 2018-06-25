@@ -8,5 +8,5 @@
     $ yarn test
     $ yarn test --coverage
     
-#### Scaffolding
-    $ yarn plop
+#### Component Scaffolding
+    $ yarn plop     // WIP
