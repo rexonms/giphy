@@ -1,15 +1,15 @@
 /** Loading animation like FB and Yelp */
 .container {
   position: relative;
-  //animation-duration: 2s;
-  //animation-fill-mode: forwards;
-  //animation-iteration-count: infinite;
-  //animation-name: placeHolderShimmer;
-  //animation-timing-function: linear;
-  //background: $greyE;
-  //background: linear-gradient(to right, $greyD 8%, $greyC 18%, $greyD 33%);
-  //background-size: 800px 104px;
-  //height: 96px;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: $greyE;
+  background: linear-gradient(to right, $greyD 8%, $greyC 18%, $greyD 33%);
+  background-size: 800px 104px;
+  line-height: 0;
 }
 @keyframes placeHolderShimmer{
   0%{
@@ -19,23 +19,34 @@
     background-position: 100vw 0
   }
 }
+.img  {
+  line-height: 0;
+  img {
+    min-width: 100px;
+    min-height: 100px;
+  }
+}
 .imgDetails {
   position: absolute;
   bottom: 0;
+  left: 0;
+  z-index: 2;
   width: 100%;
-  background: rgba(0,0,0, .5);
+  background: rgba(0,0,0, .8);
   max-height: 0;
   overflow: hidden;
   transition: max-height 1s;
   div {
-    padding: 10px;
+    padding: 5px;
   }
   p {
     font-size: $fontSizeSmall;
+    color: $white;
+    margin: 0px;
+    padding: 0px;
   }
 }
 .show {
   transition: max-height 1s;
   max-height: inherit;
-  background: red;
 }

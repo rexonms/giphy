@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Styles from './SearchBox.scss';
+import { giphyDefaults } from '../../../utils/axios';
 
 const propTypes = {
   /** Default value that will to be displayed if available */
@@ -34,7 +35,10 @@ class SearchBox extends Component {
   onClickHandler(e) {
     e.preventDefault();
     if (this.isValid()) {
-      this.props.onSearchHandler(this.state.value);
+      this.props.onSearchHandler({
+        name: giphyDefaults.endpoints.search,
+        query: this.state.value,
+      });
       this.setState({ value: '' });
     }
   }
@@ -43,7 +47,7 @@ class SearchBox extends Component {
   }
   render() {
     return (
-      <form onSubmit={e => this.onChangeHandler(e)} className={Styles.container}>
+      <form onSubmit={e => this.onClickHandler(e)} className={Styles.container}>
         <input
           name={this.props.value}
           value={this.state.value}

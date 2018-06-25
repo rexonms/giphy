@@ -42,6 +42,7 @@
     "identity-obj-proxy": "^3.0.0",
     "inquirer-directory": "^2.1.0",
     "jest": "22.4.4",
+    "lodash.uniqby": "^4.7.0",
     "node-sass": "^4.9.0",
     "object-assign": "4.1.1",
     "open-browser-webpack-plugin": "^0.0.5",

@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Welcome Component should render previous snapshot 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="searchBox"
+  >
+    <SearchBox
+      buttonText="Search"
+      onSearchHandler={[Function]}
+      placeholder="Start Typing"
+      value=""
+    />
+  </div>
+  <div
+    className="filters"
+  />
+  <div
+    className="gifs"
+  >
+    <MosaicComponent
+      action={[Function]}
+      gifs={
+        Array [
+          Object {
+            "id": "xUOrwbGjODhnRe0ZTW",
+            "image": Object {
+              "url": Object {
+                "height": "200",
+                "size": "152944",
+                "url": "https://media3.giphy.com/media/xUOrwbGjODhnRe0ZTW/200_d.gif",
+                "webp": "https://media3.giphy.com/media/xUOrwbGjODhnRe0ZTW/200_d.webp",
+                "webp_size": "49912",
+                "width": "200",
+              },
+            },
+            "rating": "g",
+            "title": "creepy thats my fetish GIF by NETFLIX",
+            "user": Object {
+              "avatarUrl": "https://media.giphy.com/avatars/netflix/bAiLTTOSCowX.png",
+            },
+          },
+          Object {
+            "id": "l2JJyDYEX1tXFmCd2",
+            "image": Object {
+              "url": Object {
+                "height": "200",
+                "size": "185842",
+                "url": "https://media0.giphy.com/media/l2JJyDYEX1tXFmCd2/200_d.gif",
+                "webp": "https://media0.giphy.com/media/l2JJyDYEX1tXFmCd2/200_d.webp",
+                "webp_size": "58368",
+                "width": "347",
+              },
+            },
+            "rating": "g",
+            "title": "julia louis dreyfus happy dance GIF by CraveTV",
+            "user": Object {
+              "avatarUrl": "https://media.giphy.com/avatars/cravetvcanada/O77NNU18q3fH.jpg",
+            },
+          },
+          Object {
+            "id": "l0HlIk8EALDCUHCA8",
+            "image": Object {
+              "url": Object {
+                "height": "200",
+                "size": "79257",
+                "url": "https://media3.giphy.com/media/l0HlIk8EALDCUHCA8/200_d.gif",
+                "webp": "https://media3.giphy.com/media/l0HlIk8EALDCUHCA8/200_d.webp",
+                "webp_size": "51750",
+                "width": "200",
+              },
+            },
+            "rating": "g",
+            "title": "high school musical summer GIF by Refinery 29 GIFs",
+            "user": Object {
+              "avatarUrl": "https://media0.giphy.com/avatars/refinery29gifs/LLnRhUU66BIl.png",
+            },
+          },
+        ]
+      }
+      type="trending"
+    />
+  </div>
+</div>
+`;

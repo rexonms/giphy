@@ -1,10 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`getGifs() should match snapshot 1`] = `[Function]`;
+exports[`match snapshot should match actions 1`] = `"app/HomeContainer/SET_GIPHY_DATA"`;
 
-exports[`setInitialArguments() should match snapshot 1`] = `
+exports[`match snapshot should match initial state state 1`] = `
+Object {
+  "searchBox": Object {
+    "buttonText": "Search",
+    "placeholder": "Start Typing",
+  },
+}
+`;
+
+exports[`match snapshot should match snapshot 1`] = `
 Object {
   "payload": undefined,
-  "type": "app/MainContainer/SET_INIT_ARGUMENTS",
+  "type": "app/HomeContainer/SET_GIPHY_DATA",
 }
 `;

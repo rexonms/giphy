@@ -1,6 +1,6 @@
 @import './../../node_modules/reset-css';
 :global body {
-  margin: 0;
+  background: red;
 }
 :global p {
   color: $white;
@@ -22,23 +22,3 @@
   font-size: 16px;
   background-color: #f7f7f7;
 }
-
-/*
-:global body {
-  margin: 0;
-  padding: 0;
-  * {
-    font-family: $fontDefault;
-    color: $defaultFontColor;
-  }
-}
-:global p {
-  font-family: $fontDefault;
-  font-size: $fontSizeDefault;
-  line-height: $fontSizeDefault * 1.5;
-  color: $defaultFontColor;
-}
-:global a {
-  text-decoration: none;
-}
-*/

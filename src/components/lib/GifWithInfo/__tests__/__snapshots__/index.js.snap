@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GifWithInfo Component should render previous snapshot 1`] = `
+<div
+  className="container"
+  onMouseEnter={[Function]}
+  onMouseLeave={[Function]}
+>
+  <div
+    className="img"
+  >
+    <img
+      alt="frances mcdormand smiling GIF by Maudit"
+      src="https://media2.giphy.com/media/b1YFCoOD2aX2E/200_d.gif"
+    />
+  </div>
+  <div
+    className="imgDetails"
+  >
+    <div>
+      <p>
+        frances mcdormand smiling GIF by Maudit
+      </p>
+      <p>
+        g
+      </p>
+    </div>
+  </div>
+</div>
+`;

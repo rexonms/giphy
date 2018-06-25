@@ -5,13 +5,13 @@ import { connect } from 'react-redux';
 import LoadingBars from './../../components/lib/LoadingBars/';
 import HomeComponent from '../../components/HomeComponent/';
 import * as actions from './ducks/';
+import { giphyDefaults } from '../../utils/axios';
 
 const propTypes = {
   home: PropTypes.shape({
     dataReceived: PropTypes.bool,
   }),
-  getTrendingGifs: PropTypes.func.isRequired,
-  getSearchedGifs: PropTypes.func.isRequired,
+  getGifs: PropTypes.func.isRequired,
 };
 const defaultProps = {
   home: {
@@ -22,7 +22,7 @@ const defaultProps = {
 export class HomeContainer extends Component {
   componentWillMount() {
     if (!this.props.home.dataReceived) {
-      this.props.getTrendingGifs();
+      this.props.getGifs({ name: giphyDefaults.endpoints.trending });
     }
   }
   render() {
@@ -31,8 +31,7 @@ export class HomeContainer extends Component {
     }
     return (
       <HomeComponent
-        {...this.props.home}
-        getSearchedGifs={this.props.getSearchedGifs}
+        {...this.props}
       />
     );
   }

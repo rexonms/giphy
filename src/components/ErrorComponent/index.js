@@ -7,7 +7,7 @@ const defaultProps = {};
 
 const ErrorComponent = () => (
   <div className={Styles.container}>
-    <p>OMG what happen!</p>
+    <img src="https://media2.giphy.com/media/5nj4KLBy2mhkH1pUWT/200_d.gif" alt="default error gif" />
   </div>
 );
 

@@ -15,18 +15,28 @@ describe('GifWithInfo Component', () => {
   };
   beforeEach(() => {
     props = {
-      imgSrc: '',
-      details: [
-        { label: 'User Name', value: 'Giphy' },
-        { label: 'Rating', value: 'g' }
-      ],
+      id: 'b1YFCoOD2aX2E',
+      title: 'frances mcdormand smiling GIF by Maudit',
+      rating: 'g',
+      user: {
+        avatarUrl: 'https://media0.giphy.com/avatars/maudit.gif',
+      },
+      image: {
+        url: {
+          url: 'https://media2.giphy.com/media/b1YFCoOD2aX2E/200_d.gif',
+          width: '345',
+          height: '200',
+          size: '353795',
+          webp: 'https://media2.giphy.com/media/b1YFCoOD2aX2E/200_d.webp',
+          webp_size: '102774',
+        },
+      },
     };
     shallowVideoComponent = undefined;
   });
-  // it('should render previous snapshot', () => {
-  //   // fails due to uuit
-  //   expect(gifWithInfoComponent()).toMatchSnapshot();
-  // });
+  it('should render previous snapshot', () => {
+    expect(gifWithInfoComponent()).toMatchSnapshot();
+  });
   it('should not have .show class on load', () => {
     expect(gifWithInfoComponent().find('.show').exists()).toBe(false);
   });

@@ -2,10 +2,12 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { withKnobs } from '@storybook/addon-knobs/react';
 import { withInfo } from '@storybook/addon-info';
+import { action } from '@storybook/addon-actions';
 
-import MosaicContainer from './index';
+import MosaicComponent from './index';
+import { giphyDefaults } from '../../../utils/axios';
 
-const stories = storiesOf('lib/MosaicContainer', module);
+const stories = storiesOf('lib/MosaicComponent', module);
 const props = {
   gifs: [
     {
@@ -63,10 +65,15 @@ const props = {
       },
     },
   ],
+  endpoint: giphyDefaults.endpoints.trending,
+  action: () => {},
 };
 
 stories.addDecorator(withKnobs);
 stories.addDecorator(story => (story()));
-stories.add('MosaicContainer', withInfo('Component')(() => (
-  <MosaicContainer {...props} />
+stories.add('MosaicComponent', withInfo('Component')(() => (
+  <MosaicComponent
+    {...props}
+    action={action('action')}
+  />
 )));

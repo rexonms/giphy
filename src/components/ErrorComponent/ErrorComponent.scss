@@ -4,7 +4,9 @@
   justify-content: space-between;
   flex-direction: column;
   height: 100vh;
-  p {
-    color: red;
+  img {
+    max-width: 400px;
+    max-height: 400px;
+    margin: auto;
   }
 }

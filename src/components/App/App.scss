@@ -1,9 +1,17 @@
+@import './../../../node_modules/reset-css';
+
 body {
-  margin: 0;
+  background: $black;
+}
+p {
+  color: $white;
+  font-family: $fontDefault;
+  font-size: $fontSizeDefault;
+  line-height: $fontSizeDefault * 1.3;
+  color: $defaultFontColor;
 }
 .container {
-  width:100vw;
-  height: 100vh;
+  //width:100vw;
+  //height: 100vh;
   margin: auto;
-  background: $black;
 }

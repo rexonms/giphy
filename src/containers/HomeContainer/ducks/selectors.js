@@ -1,20 +1,12 @@
-export const extractResponseInfo = response => (
-  {
-    pagination: response.pagination,
-    data: response.data.map(d => (
-      {
-        id: d.id,
-        title: d.title,
-        rating: d.rating,
-        user: {
-          avatarUrl: d.user ? d.user.avatar_url : '',
-        },
-        image: {
-          url: d.images.fixed_height_downsampled,
-        },
-      }
-    )),
-  }
-);
+import _uniqueBy from 'lodash.uniqby';
 
-export const foo = 'bazz';
+export const concatData = (state, payload) => {
+  if (state.giphy) {
+    const newPayload = JSON.parse(JSON.stringify(payload));
+    const data = payload.giphy.data.concat(state.giphy.data);
+    newPayload.giphy.data = _uniqueBy(data, d => d.id);
+    return newPayload;
+  } return payload;
+};
+
+export const f = 'd';

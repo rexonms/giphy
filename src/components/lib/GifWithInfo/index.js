@@ -28,6 +28,7 @@ class GifWithInfo extends Component {
   }
 
   render() {
+    const { image } = this.props;
     return (
       <div
         className={Styles.container}
@@ -35,7 +36,11 @@ class GifWithInfo extends Component {
         onMouseLeave={() => this.setState({ showDetails: false })}
       >
         <div className={Styles.img}>
-          <img src={this.props.image.url.url} alt={this.props.title} />
+          <img
+            src={image.url.url}
+            alt={this.props.title}
+            // style={{ height: `${image.url.height}px` }}
+          />
         </div>
         <div className={this.getClassName()}>
           <div>

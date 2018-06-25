@@ -4,8 +4,9 @@ exports[`Error Component should render previous snapshot 1`] = `
 <div
   className="container"
 >
-  <p>
-    OMG what happen!
-  </p>
+  <img
+    alt="default error gif"
+    src="https://media2.giphy.com/media/5nj4KLBy2mhkH1pUWT/200_d.gif"
+  />
 </div>
 `;

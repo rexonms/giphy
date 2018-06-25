@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Welcome Component should render previous snapshot 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="gifs"
+  >
+    <GifWithInfo
+      id="l4FGqDtRMMjOKdFGU"
+      image={
+        Object {
+          "url": Object {
+            "height": "200",
+            "size": "256421",
+            "url": "https://media2.giphy.com/media/l4FGqDtRMMjOKdFGU/200_d.gif",
+            "webp": "https://media2.giphy.com/media/l4FGqDtRMMjOKdFGU/200_d.webp",
+            "webp_size": "66136",
+            "width": "356",
+          },
+        }
+      }
+      key="l4FGqDtRMMjOKdFGU"
+      rating="g"
+      title="tina fey shades GIF by Unbreakable Kimmy Schmidt"
+      user={
+        Object {
+          "avatarUrl": "https://media.giphy.com/avatars/kimmyschmidt/8Wnie77cnpH5.png",
+        }
+      }
+    />
+    <GifWithInfo
+      id="yoJC2B1sHdXJjPTnEs"
+      image={
+        Object {
+          "url": Object {
+            "height": "200",
+            "size": "247691",
+            "url": "https://media3.giphy.com/media/yoJC2B1sHdXJjPTnEs/200_d.gif",
+            "webp": "https://media3.giphy.com/media/yoJC2B1sHdXJjPTnEs/200_d.webp",
+            "webp_size": "58832",
+            "width": "259",
+          },
+        }
+      }
+      key="yoJC2B1sHdXJjPTnEs"
+      rating="g"
+      title="leonardo dicaprio omg GIF by WE tv"
+      user={
+        Object {
+          "avatarUrl": "https://media.giphy.com/avatars/wetv/ez6Knwamyn0A.jpg",
+        }
+      }
+    />
+    <GifWithInfo
+      id="b1YFCoOD2aX2E"
+      image={
+        Object {
+          "url": Object {
+            "height": "200",
+            "size": "353795",
+            "url": "https://media2.giphy.com/media/b1YFCoOD2aX2E/200_d.gif",
+            "webp": "https://media2.giphy.com/media/b1YFCoOD2aX2E/200_d.webp",
+            "webp_size": "102774",
+            "width": "345",
+          },
+        }
+      }
+      key="b1YFCoOD2aX2E"
+      rating="g"
+      title="frances mcdormand smiling GIF by Maudit"
+      user={
+        Object {
+          "avatarUrl": "https://media0.giphy.com/avatars/maudit.gif",
+        }
+      }
+    />
+  </div>
+</div>
+`;
