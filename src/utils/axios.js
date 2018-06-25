@@ -7,8 +7,8 @@ export const getDataFromGiphy = async (url) => {
 };
 
 export const giphyDefaults = {
-  baseURL: process.env.REACT_APP_GIPHY_BASE_URL,
-  apiKey: process.env.REACT_APP_GIPHY_API_KEY,
+  baseURL: process.env.REACT_APP_GIPHY_BASE_URL || 'https://api.giphy.com',
+  apiKey: process.env.REACT_APP_GIPHY_API_KEY || 'eazZw1kI9vdWbXRls4gVKo4LCGZQtoLb',
   limit: 25,
   rating: 'g',
   offset: 0,

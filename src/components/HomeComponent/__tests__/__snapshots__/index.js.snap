@@ -22,6 +22,12 @@ exports[`Welcome Component should render previous snapshot 1`] = `
   >
     <MosaicComponent
       action={[Function]}
+      endpoint={
+        Object {
+          "name": "trending",
+          "query": "foo",
+        }
+      }
       gifs={
         Array [
           Object {
@@ -80,7 +86,6 @@ exports[`Welcome Component should render previous snapshot 1`] = `
           },
         ]
       }
-      type="trending"
     />
   </div>
 </div>

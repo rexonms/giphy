@@ -35,7 +35,6 @@ export const setGiphyData = payload => ({ type: SET_GIPHY_DATA, payload });
 // e.g. thunks, epics
 export const getGifs = endpoint => (
   async (dispatch, getState) => {
-    console.log('endpoint', endpoint);
     const { home } = getState();
     const url = getUrl({ home, endpoint });
     try {

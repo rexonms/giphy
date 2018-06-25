@@ -15,6 +15,10 @@ describe('Welcome Component', () => {
   };
   beforeEach(() => {
     props = {
+      endpoint: {
+        name: giphyDefaults.endpoints.trending,
+        query: 'foo',
+      },
       gifs: [
         {
           id: 'l4FGqDtRMMjOKdFGU',
@@ -71,7 +75,6 @@ describe('Welcome Component', () => {
           },
         },
       ],
-      endpoint: giphyDefaults.endpoints.trending,
       action: jest.fn(),
     };
   });
@@ -85,13 +88,6 @@ describe('Welcome Component', () => {
   it('should have child components', () => {
     expect(mosaicContainer().find('GifWithInfo').exists()).toBe(true);
     expect(mosaicContainer().find('LoadingBars').exists()).not.toBe(true);
-  });
-  it('should loading child component when type is not trending', () => {
-    expect(mosaicContainer()
-      .setProps({ endpoint: giphyDefaults.endpoints.search })
-      .find('LoadingBars')
-      .exists())
-      .toBe(true);
   });
 });
 

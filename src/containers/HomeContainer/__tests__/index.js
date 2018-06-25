@@ -15,7 +15,7 @@ describe('HomeContainer container', () => {
   };
   beforeEach(() => {
     props = {
-      welcome: {},
+      home: {},
       getGifs: jest.fn(),
     };
     shallowHomeContainer = undefined;

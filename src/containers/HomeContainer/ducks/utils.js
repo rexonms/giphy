@@ -4,28 +4,19 @@ export const getUrl = ({ home, endpoint }) => {
   const base = `${giphyDefaults.baseURL}/v1/gifs/${endpoint.name}`;
   const api = `api_key=${giphyDefaults.apiKey}`;
   const rating = `rating=${giphyDefaults.rating}`;
-  const oldEndpointName = home.giphy && home.giphy.endpoint.name;
-  let isNewEndpoint = false;
-  if (oldEndpointName === undefined) {
-    isNewEndpoint = true;
-  }
-  console.log('isNewEndpoint', isNewEndpoint);
-  const offsetValue = isNewEndpoint === true ? 0 : home.giphy.pagination.offset + 1;
-  const offset = `offset=${offsetValue}`;
   const url = `${base}?${api}&${rating}`;
-  let limit;
+  let limit = `limit=${giphyDefaults.limit}`;
   if (endpoint.name === giphyDefaults.endpoints.trending) {
     // check if there is any
-    if (!home.giphy) {
-      limit = `limit=${giphyDefaults.limit}`;
-    } else {
+    if (home.giphy) {
       limit = `limit=${home.giphy.pagination.count + giphyDefaults.limit}`;
     }
     return `${url}&${limit}`;
   }
-  console.log('offset', offset);
-  console.log('endpoint', endpoint);
-  return `${url}&q=${endpoint.query}`;
+  const offsetValue = endpoint.query === home.giphy.endpoint.query ?
+    home.giphy.pagination.offset + giphyDefaults.limit + 1 : 0;
+  const offset = `offset=${offsetValue}`;
+  return `${url}&${limit}&${offset}&q=${endpoint.query}`;
 };
 
 export const extractResponseInfo = (data, endpoint) => (

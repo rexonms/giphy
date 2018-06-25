@@ -22,6 +22,9 @@ const defaultProps = {};
 class MosaicComponent extends Component {
   constructor() {
     super();
+    this.state = {
+      fetching: false,
+    };
     this.handleOnScroll = this.handleOnScroll.bind(this);
   }
   componentDidMount() {
@@ -30,6 +33,12 @@ class MosaicComponent extends Component {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleOnScroll);
   }
+  componentWillReceiveProps() {
+    // Making sure the action is called only every second
+    setTimeout(() => {
+      this.setState({ fetching: false });
+    }, 1000);
+  }
   handleOnScroll() {
     // http://stackoverflow.com/questions/9439725/javascript-how-to-detect-if-browser-window-is-scrolled-to-bottom
     const docEl = document.documentElement;
@@ -37,8 +46,9 @@ class MosaicComponent extends Component {
     const scrollHeight = (docEl && docEl.scrollHeight) || document.body.scrollHeight;
     const clientHeight = docEl.clientHeight || window.innerHeight;
     const scrolledToBottom = Math.ceil(scrollTop + clientHeight) >= scrollHeight;
-    if (scrolledToBottom) {
+    if (scrolledToBottom && !this.state.fetching) {
       this.props.action(this.props.endpoint);
+      this.setState({ fetching: true });
     }
   }
   render() {
@@ -47,7 +57,9 @@ class MosaicComponent extends Component {
         <div className={Styles.gifs}>
           {this.props.gifs.map(gif => <GifWithInfo key={gif.id} {...gif} />)}
         </div>
-        <LoadingBars />
+        {this.state.fetching &&
+          <LoadingBars />
+        }
       </div>
     );
   }

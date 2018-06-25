@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 import HomeComponent from './../index';
+import { giphyDefaults } from '../../../utils/axios';
 
 describe('Welcome Component', () => {
   let props;
@@ -22,8 +23,10 @@ describe('Welcome Component', () => {
           onSearchHandler: () => {},
         },
         giphy: {
-          type: 'trending',
-          query: '',
+          endpoint: {
+            name: giphyDefaults.endpoints.trending,
+            query: 'foo',
+          },
           pagination: {
             total_count: 56795,
             count: 3,

@@ -10,31 +10,47 @@ describe('getUrl', () => {
           placeholder: 'Start Typing',
           buttonText: 'Search',
         },
+        giphy: {
+          endpoint: {
+            name: giphyDefaults.endpoints.trending,
+            query: 'test',
+          },
+          pagination: {
+            total_count: 56840,
+            count: 0,
+            offset: 0,
+          },
+        },
       },
-      endpoints: giphyDefaults.endpoints.trending,
-      query: '',
+      endpoint: {
+        name: giphyDefaults.endpoints.trending,
+        query: 'test',
+      },
     };
   });
   it('should get trending url', () => {
-    const result = `https://api.giphy.com/v1/gifs/trending?api_key=eazZw1kI9vdWbXRls4gVKo4LCGZQtoLb&limit=${giphyDefaults.limit}&offset=0&rating=g`;
+    const result = `https://api.giphy.com/v1/gifs/trending?api_key=eazZw1kI9vdWbXRls4gVKo4LCGZQtoLb&rating=g&limit=${giphyDefaults.limit}`;
     expect(getUrl(args)).toBe(result);
   });
   it('should get search url', () => {
-    args.endpoints = giphyDefaults.endpoints.search;
-    args.query = 'wow';
-    const result = `https://api.giphy.com/v1/gifs/search?api_key=eazZw1kI9vdWbXRls4gVKo4LCGZQtoLb&limit=${giphyDefaults.limit}&offset=0&rating=g&q=wow`;
+    args.endpoint = {
+      name: giphyDefaults.endpoints.search,
+      query: 'test',
+    };
+    const result = `https://api.giphy.com/v1/gifs/search?api_key=eazZw1kI9vdWbXRls4gVKo4LCGZQtoLb&rating=g&limit=${giphyDefaults.limit}&offset=26&q=test`;
     expect(getUrl(args)).toBe(result);
   });
 });
-
 
 describe('extractResponseInfo', () => {
   let data;
   let endpoint;
   let query;
   beforeEach(() => {
-    endpoint = giphyDefaults.endpoints.trending;
-    query = '';
+    endpoint = {
+      name: giphyDefaults.endpoints.search,
+      query: 'test',
+    };
     data = {
       data: [{
         type: 'gif',

@@ -9,6 +9,10 @@ import { giphyDefaults } from '../../../utils/axios';
 
 const stories = storiesOf('lib/MosaicComponent', module);
 const props = {
+  endpoint: {
+    name: giphyDefaults.endpoints.trending,
+    query: 'foo',
+  },
   gifs: [
     {
       id: 'l4FGqDtRMMjOKdFGU',
@@ -65,7 +69,6 @@ const props = {
       },
     },
   ],
-  endpoint: giphyDefaults.endpoints.trending,
   action: () => {},
 };
 
