@@ -1,3 +1,9 @@
+#### Node Requirement
+    Node version: ^8.10.0 || >=9.10.0
+
+#### Install Node modules
+    $ yarn
+    
 #### Development 
     $ yarn start
 
